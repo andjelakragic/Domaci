@@ -43,18 +43,5 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
-const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('kragsi', 'kragsi', 'kragsi', {
-  host: 'db', 
-  dialect: 'mysql',
-  port: 3306,
-});
 
-sequelize.authenticate()
-  .then(() => {
-    console.log('uspesno.');
-  })
-  .catch(err => {
-    console.error('neuspesno', err);
-  });
